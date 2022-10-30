@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    <h1>PAGE</h1>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><img class="icon" src="static/images/home-page.png" alt="home"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/page"><img class="icon" src="static/images/page.png" alt="page"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/post"><img class="icon" src="static/images/post.png" alt="post"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/login"><img class="icon" src="static/images/login.png" alt="login"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/logout"><img class="icon" src="static/images/logout.png" alt="logout"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/register"><img class="icon" src="static/images/register.png" alt="register"></a>
+        </li>
+  </ul>
+{% endblock %}
+
+{% block body %}
+    {% for post in posts %}
+        <div class="post">
+            <header>{{ post["postguy"] }}</header>
+            <img src="{{ post['image'] }}">
+            <p>{{ post["caption"] }}<p>
+                <form action="/delete" method="post">
+                    <input type="hidden" name="id" value="{{ post['id'] }}">
+                    <input type="submit" value="delete">
+                </form>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,82 @@
+header
+{
+    background-color: blue;
+    text-align: center;
+}
+body
+{
+    text-align: center;
+    background-color: royalblue;
+    color: black;
+}
+a:link
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:active
+{
+    text-decoration: none;
+    color: black;
+}
+.post
+{
+    border: 1px solid black;
+    background: white;
+    color: black;
+    width: 30%;
+    text-align: center;
+    margin: 10px 32% 10px 35%;
+}
+.head
+{
+    display: block;
+    background: rgba(190,190,190,0.5);
+    padding: 5px;
+    text-align: left;
+}
+.caption
+{
+    margin: 10px;
+}
+header
+{
+    padding-left: 20px;
+}
+.icon
+{
+    width: 25px;
+}
+.comments
+{
+    display: inline;
+    border: 1px dashed silver;
+    padding: 3px;
+}
+.addcomment
+{
+    text-align: left;
+    margin: 0.5em;
+}
+.comment
+{
+    background-color: silver;
+    margin: 0.3em;
+}
+#submit
+{
+    font-size: 10px;
+}
